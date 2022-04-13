@@ -8,9 +8,8 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
     - uses: actions/checkout@v3
-    - name: Run my funny commands
+    - uses: actions/setup-python@v3
+    - name: Run som python codes
       run: |
-        pwd
-        ls
-        echo abcdefg
-        uname -a
+        python -c "print(3+2)"
+        python --version
