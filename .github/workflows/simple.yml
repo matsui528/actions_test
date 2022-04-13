@@ -13,3 +13,7 @@ jobs:
       run: |
         python -c "print(3+2)"
         python --version
+    - name: Get running processes for the current user and get disk usage in human readable format
+      run: 
+        ps -u $USER
+        df -h
