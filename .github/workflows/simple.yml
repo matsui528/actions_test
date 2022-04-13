@@ -17,8 +17,8 @@ jobs:
       shell: bash
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
-          ps --help
           echo "OS: Windows" 
+          ps -u $env:UserName
         else 
           ps -u $USER
         fi
