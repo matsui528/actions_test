@@ -14,10 +14,10 @@ jobs:
         python -c "print(3+2)"
         python --version
     - name: Get running processes for the current user (on windows run ps without any arguments) and get disk usage in human readable format
-      shell: powershell
+      shell: bash
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
-          ps
+          ps -u $USER
         else 
           ps -u $USER
         fi
