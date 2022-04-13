@@ -17,8 +17,7 @@ jobs:
       shell: bash
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
-          echo "OS: Windows" 
-          Get-Process | ? {$_.SI -eq (Get-Process -PID $PID).SessionId}
+          echo "Gave up on trying to get ps -u to work on Windows.. :("
         else 
           ps -u $USER
         fi
