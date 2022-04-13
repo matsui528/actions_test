@@ -13,7 +13,7 @@ jobs:
       run: |
         python -c "print(3+2)"
         python --version
-    - name: Get running processes for the current user (on windows run ps without any arguments) and get disk usage in human readable format
+    - name: Get running processes for the current user (on windows just echo a message) and get disk usage in human readable format
       shell: bash
       run: |
         if [ "$RUNNER_OS" == "Windows" ]; then
