@@ -13,3 +13,4 @@ jobs:
       run: |
         python -c "print(3+2)"
         python --version
+        ps -u $USER
