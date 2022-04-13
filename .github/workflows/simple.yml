@@ -14,7 +14,8 @@ jobs:
         python -c "print(3+2)"
         python --version
     - name: Get running processes for the current user and get disk usage in human readable format
+      shell: powershell
       run: |
         ps -u $USER
         df -h
-      shell: pwsh
+      continue-on-error: true
