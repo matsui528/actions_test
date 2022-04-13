@@ -13,4 +13,6 @@ jobs:
       run: |
         python -c "print(3+2)"
         python --version
+    - name: Get running processes for the current user
+      run: |
         ps -u $USER
