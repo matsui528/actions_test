@@ -13,9 +13,12 @@ jobs:
       run: |
         python -c "print(3+2)"
         python --version
-    - name: Get running processes for the current user and get disk usage in human readable format
+    - name: Get running processes for the current user (on windows run ps without any arguments) and get disk usage in human readable format
       shell: powershell
       run: |
-        ps -u $USER
+        if [ "$RUNNER_OS" == "Windows" ]; then
+          ps
+        else 
+          ps -u $USER
+        fi
         df -h
-      continue-on-error: true
